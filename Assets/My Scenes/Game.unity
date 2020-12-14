@@ -865,10 +865,24 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
+      propertyPath: SonidoCaida
+      value: 
+      objectReference: {fileID: 4418530399893182140, guid: 10ccaa4fe5e42614c9f99964f21ee564,
+        type: 3}
+    - target: {fileID: 11400000, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
+      propertyPath: SonidoSalto
+      value: 
+      objectReference: {fileID: 845117175748500636, guid: 111e8fabca720dd4dad9459581525ee4,
+        type: 3}
     - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
       propertyPath: m_MaxSpeed
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 996581077}
     - target: {fileID: 21200000, guid: 87a2357765801c34292d6718d8b4d770, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -1507,6 +1521,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983901376}
   m_CullTransparentMesh: 0
+--- !u!114 &996581077 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11400000, guid: 87a2357765801c34292d6718d8b4d770,
+    type: 3}
+  m_PrefabInstance: {fileID: 552187178}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1011821911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,7 +2306,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 04ad8ac7d224d9547b7653407508f74a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3662d4e59a8f954182f55ad5c0e2baf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

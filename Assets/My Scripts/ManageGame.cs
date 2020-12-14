@@ -61,4 +61,5 @@ public class ManageGame : MonoBehaviour
     void Awake(){
     	DontDestroyOnLoad(this.gameObject);
     }
+	
 }
