@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class MultipleColor : MonoBehaviour
 {
-    public Text[] texts;
     float aux;
     public float timeRemaining = 5;
     public Material[] colors;
-
+    public Text[] texts;
     void Start()
     {
     	aux = timeRemaining;

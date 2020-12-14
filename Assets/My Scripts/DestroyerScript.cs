@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DestroyerScript : MonoBehaviour
 {
+	
     private void OnTriggerStay2D(Collider2D collision){
     	if(collision.tag == "Player")
     	{
