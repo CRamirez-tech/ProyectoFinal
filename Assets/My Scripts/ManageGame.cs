@@ -5,23 +5,27 @@ using UnityEngine.SceneManagement;
 [RequireComponent (typeof (AudioSource))]
 public class ManageGame : MonoBehaviour
 {
-    
     public AudioClip[] musics;
-    AudioSource m_MyAudioSource;
+    public AudioClip[] sounds;
+    int actual;
+    AudioSource audioSource;
     void Start()
     {
-        m_MyAudioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void changeMusic(int n){
     	if(n<musics.Length && n>=0){
-    		m_MyAudioSource.Stop();
-    		m_MyAudioSource.clip = musics[n];
-    		m_MyAudioSource.Play();
+    		audioSource.Stop();
+    		audioSource.clip = musics[n];
+    		audioSource.Play();
     	}
     }
-    public void LlamarNivel(string str){
-    	SceneManager.LoadScene(str);
+    public void playSound(int n){
+        audioSource.PlayOneShot(sounds[n], 0.7f);
+    }
+    public void LlamarNivel(string sc){
+    	SceneManager.LoadScene(sc);
     }
     public void quitGame(){
         //Salir del editor de unity

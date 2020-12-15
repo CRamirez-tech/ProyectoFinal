@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class TiempoVida : MonoBehaviour
 {
+    public int tiempoVida;
     public GameObject CanvasObject;
+    GameObject manager;
+    //ManageGame manager;
     void Start()
     {
-    	Destroy(gameObject,32);
+    	Destroy(gameObject,tiempoVida);
+        manager = GameObject.Find("Manage Game");
     }
     // Update is called once per frame
     void Update()
@@ -19,5 +23,6 @@ public class TiempoVida : MonoBehaviour
     void OnDestroy()
     {
         CanvasObject.SetActive(true);
+        manager.GetComponent<AudioSource>().Play();
     }
 }
