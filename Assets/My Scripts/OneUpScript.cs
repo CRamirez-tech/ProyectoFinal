@@ -9,7 +9,7 @@ public class OneUpScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
     	if(collision.tag == "Player")
     	{
-    		HUD = GameObject.Find("Main Camera").GetComponent<HUDScript>();
+    		HUD = GameObject.FindWithTag("HudManager").GetComponent<HUDScript>();
     		HUD.increaseScore(2);
             HUD.addLife(1);
     		Destroy(this.gameObject);

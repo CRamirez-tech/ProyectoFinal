@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2373545227207611369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2373545227207611383}
+  - component: {fileID: 2373545227207611368}
+  m_Layer: 0
+  m_Name: HudManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2373545227207611383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2373545227207611369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8786277, y: 0.28850845, z: -0.96806294}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2373545227207611368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2373545227207611369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba67097457556344b8d8e35bf477d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  messageText: {fileID: 0}
+  coinsText: {fileID: 0}
+  lifes: 6
+  platform: {fileID: 7331451914907762333, guid: 836567a87da85ae44ab438227c54a40a,
+    type: 3}
+  sprites:
+  - {fileID: 1564688358316481467, guid: 782e11bdd335f9845a9ffffdae293e67, type: 3}
+  - {fileID: 7885684081779559860, guid: 782e11bdd335f9845a9ffffdae293e67, type: 3}
+  - {fileID: 5726080727020278575, guid: 782e11bdd335f9845a9ffffdae293e67, type: 3}
+  - {fileID: 6733174987777009597, guid: 782e11bdd335f9845a9ffffdae293e67, type: 3}
+  - {fileID: 4537193172801868870, guid: 782e11bdd335f9845a9ffffdae293e67, type: 3}
+  - {fileID: 8522625820373494394, guid: 782e11bdd335f9845a9ffffdae293e67, type: 3}
+  - {fileID: -5807300337447395838, guid: 782e11bdd335f9845a9ffffdae293e67, type: 3}
+  imagen: {fileID: 0}

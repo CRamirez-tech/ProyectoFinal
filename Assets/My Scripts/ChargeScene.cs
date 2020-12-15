@@ -5,13 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class ChargeScene : MonoBehaviour
 {
-	GameObject controller;
     public void backToMain(){
-    	controller = GameObject.FindGameObjectWithTag("GameController");
-    	Destroy(controller);
+        AudioManager._instance.changeMusic(0);
     	SceneManager.LoadScene("MainScene");
     }
     public void backToGame(){
+    	AudioManager._instance.changeMusic(1);
     	SceneManager.LoadScene("Game");
+    }
+    public void LlamarNivel(string sc){
+    	SceneManager.LoadScene(sc);
+    }
+    public void quitGame(){
+        //Salir del editor de unity
+    	Debug.Break();
+        //Salir del juego en produccion
+    	Application.Quit();
     }
 }

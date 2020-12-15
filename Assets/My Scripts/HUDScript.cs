@@ -13,21 +13,23 @@ public class HUDScript : MonoBehaviour
     public GameObject platform;
     public Sprite[] sprites;
     public Image imagen;
-    float coins = 0;
-    float playerScore = 0;
+    int coins = 0;
+    int playerScore = 0;
     float moment;
     string message="";
-    //ManageGame manager;
-    // Update is called once per frame
-    void Start(){
-        //manager = GameObject.FindGameObjectWithTag("GameController").GetComponent(ManageGame);
-    }
-    void Update()
+    int n=0;
+    void FixedUpdate()
     {
-        playerScore += Time.deltaTime;
-        if(moment+0.5f<=playerScore){
+        n++;
+        if(n==20){
+            n=0;
+            playerScore+=2;
             message = "";
+            scoreText.text = playerScore+"";
+            messageText.text = message;
         }
+        
+        coinsText.text = coins+"" ;
     }
     public void addCoins(int n){
         coins+=n;
@@ -37,7 +39,7 @@ public class HUDScript : MonoBehaviour
         refreshImage(n*-1);
         if(lifes<1)
         {
-            SceneManager.LoadScene("GameOver",LoadSceneMode.Single);
+            SceneManager.LoadScene("GameOver");
         }
         player.transform.position = new Vector3(-3f,-1f,5f);
         Instantiate(platform,new Vector3(-1.5f,-3.5f,5f),Quaternion.identity);
@@ -58,16 +60,9 @@ public class HUDScript : MonoBehaviour
     public void increaseScore(int amount)
     {
     	playerScore += amount;
-        setMessage("+ "+amount*10);
+        setMessage("+ "+amount);
     }
     public void setMessage(string str){
-        moment = playerScore;
         message = str;
-    }
-    private void OnGUI()
-    {
-        scoreText.text = (int)(playerScore*10)+"";
-        messageText.text = message;
-        coinsText.text =(int)(coins)+"" ;
     }
 }

@@ -21,7 +21,7 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
         bool DoubleJump;
-	    public Platformer2DUserControl jugador;//creacion de objeto jugador robot
+	    //public Platformer2DUserControl jugador;//creacion de objeto jugador robot
         private void Awake()
 	
         {
@@ -100,15 +100,13 @@ namespace UnityStandardAssets._2D
             // If the player should jump...
             if ((m_Grounded  && m_Anim.GetBool("Ground")||!DoubleJump)&& jump)
             {
-				Instantiate (jugador.SonidoSalto);//salto una vez
-				
+                GetComponent<AudioSource>().Play();
                 // Add a vertical force to the player.
 				if(!m_Grounded)
 				{
-					Instantiate (jugador.SonidoSalto);//salto doble
-					m_Rigidbody2D.velocity=new Vector2(0,0);
+					GetComponent<AudioSource>().Play();
+                    m_Rigidbody2D.velocity=new Vector2(0,0);
 					DoubleJump=true;
-				
 				}
 				
                 m_Grounded = false;
