@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,17 +18,20 @@ public class HUDScript : MonoBehaviour
     float moment;
     string message="";
     int n=0;
+    void Start()
+    {
+        AudioManager._instance.changeMusic(0);
+    }
     void FixedUpdate()
     {
         n++;
         if(n==20){
             n=0;
-            playerScore+=2;
+            playerScore+=10;
             message = "";
             scoreText.text = playerScore+"";
-            messageText.text = message;
         }
-        
+        messageText.text = message;
         coinsText.text = coins+"" ;
     }
     public void addCoins(int n){
